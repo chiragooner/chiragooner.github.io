@@ -187,17 +187,17 @@ section{
 
 .section__text__p1{
     text-align: center;
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
 }
 
 .section__text__p2{
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
-title{
-    font-size: 3rem;
+.title{
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -232,30 +232,81 @@ title{
 }
 
 .btn-color-1, .btn-color-2{
-    border: rgb(53,53,53) 0.1rem solid;
+    border: rgb(0,0,0) 0.1rem solid;
+}
+
+.btn-color-2{
+    color: rgb(255,255,255);
+    background: rgb(53,53,53);
 }
 
 .btn-color-1:hover, .btn-color-2:hover{
     cursor: pointer;
 }
 
-.btn-color-1, .btn-color-2:hover{
+.btn-color-1{
     background: rgb(53,53,53);
     color: antiquewhite;
 }
 
-.btn-color-1:hover{
-    background: rgb(0, 0, 0);
-}
-
 .btn-color-2{
     background: none;
+    color: rgb(53,53,53)
 }
 
-.btn-color-2:hover{
-    border: rgb(255, 255, 255) 0.1rem solid;
+.btn-color-2:hover, .btn-color-1:hover{
+    background: black;
+    color: antiquewhite;
 }
 
-.btn-container{
-    gap: 1rem;
+
+/* ABOUT SECTION */
+#about{
+    position: relative;
+}
+
+.about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.about-details-container {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers, .about-details-container{
+    display: flex;
+}
+
+.about-pic{
+    border-radius: 2rem;
+}
+
+.arrow{
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+
+.details-container{
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53,53,53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+}
+
+.section-container{
+    gap: 4rem;
+    height: 80%;
+}
+
+.section__pic-container{
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
 }
