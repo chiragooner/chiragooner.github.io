@@ -44,13 +44,13 @@ nav{
     font-size: 1.5rem;
 }
 
-a{
+nav a{
     color: black;
     text-decoration: none;
     text-decoration-color: white;
 }
 
-a:hover{
+nav a:hover{
     color: gray;
     text-decoration: underline;
     text-underline-offset: 1rem;
@@ -309,4 +309,155 @@ section{
     height: 400px;
     width: 400px;
     margin: auto 0;
+}
+
+/* EXPERIENCE SECTION */
+#experience{
+    position: relative;
+}
+
+.experience-sub-title{
+    color: rgb(85,85,85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.experience-details-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.article-container{
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
+article{
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    gap: 0.5rem;
+}
+
+article .icon{
+    cursor: default;
+}
+
+article h3{
+    font-size: 1.45rem;
+}
+
+article p{
+    color: rgb(85, 85, 85);
+    font-size: 1rem;
+}
+
+.forward-link{
+    color: rgb(85, 85, 85);
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.forward-link:hover{
+    color: rgb(53,53,53);
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+/* PROJECTS SECTION */
+
+#projects{
+    position: relative;
+}
+
+.project-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Space between image and text */
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: antiquewhite;
+    border: black;
+    border-radius: 0.5rem;
+    outline: 1px solid rgb(0,0,0);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+}
+
+.project-btn:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+.btn-icon{
+    width: 1rem;
+    height: auto;
+}
+
+.color-container{
+    border-color: rgb(163, 163, 163);
+    background: rgb(250,250,250);
+}
+
+.project-title{
+    margin: 1rem;
+    color: black;
+}
+
+/* CONTACT SECTION */
+
+#contact{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 17vh;
+}
+
+.contact-info-upper-container{
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid; 
+    border-color: rgb(163, 163, 163);
+    background: rgb(250,250,250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.contact-info-container p{
+    font-size: larger;
+}
+
+.contact-icon{
+    cursor: default;
+}
+
+.contact-text{
+    text-decoration: none;
+    color: black;
+}
+
+footer{
+    height: 26vh;
+    margin: 0 1rem;
+}
+
+footer p{
+    text-align: center;
 }
