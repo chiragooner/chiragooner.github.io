@@ -18,7 +18,7 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         return;
     }
 
-    emailjs.init("FiPOvnkTfbjZyuI62");
+    emailjs.init("VV6Uf_Cobbg3Cqv6g");
 
     const emailData = {
         firstName,
