@@ -1,4 +1,4 @@
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
     #desktop-nav{
         display: none;
     }
@@ -7,4 +7,3 @@
         display: flex;
     }
 }
-

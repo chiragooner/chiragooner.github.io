@@ -6,18 +6,20 @@ function toggleMenu(){
 }
 
 document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); // Prevent default form submission
 
-    // Gather form data
-    const firstName = document.getElementById("firstName").value;
-    const lastName = document.getElementById("lastName").value;
-    const contactNumber = document.getElementById("contactNumber").value;
-    const message = document.getElementById("message").value;
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+    const contactNumber = document.getElementById("contactNumber").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    // EmailJS configuration
-    emailjs.init("PUBLIC_KEY");//user_id or public key
+    if (!firstName || !lastName || !contactNumber || !message) {
+        alert("Please fill out all fields before submitting.");
+        return;
+    }
 
-    // Email data
+    emailjs.init("FiPOvnkTfbjZyuI62");
+
     const emailData = {
         firstName,
         lastName,
@@ -25,13 +27,15 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
         message,
     };
 
-    // Send the email
-    emailjs.send("service_id", "template_id", emailData) //service_id and template_id
-        .then(function (response) {
+    console.log("Sending email with data:", emailData);
+
+    emailjs.send("service_87r48zh", "template_7cjv26m", emailData)
+        .then(function(response) {
+            console.log("Email sent successfully:", response);
             alert("Message sent successfully!");
         })
-        .catch(function (error) {
+        .catch(function(error) {
+            console.error("EmailJS error details:", error);
             alert("Failed to send the message. Please try again later.");
-            console.error("EmailJS error:", error);
         });
 });
